@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<!-- skel-baseline v3.0.0 | (c) n33 | skel.io | MIT licensed -->
+<html>
+	<head>
+		<title>Pseudoforums - Developer's Menu</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body id="top">
+
+		<!-- Header -->
+			<header id="header">
+				<h1><a href="index.html">Pseudoforums</a></h1>
+				<a id="log" href="#">Login</a>
+				<a href="#nav">Menu</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul id="menubar" class="links">
+					<li><a href="#top">Top</a></li>
+					<li><a href="#content">Content</a></li>
+					<li><a href="#elements">Elements</a></li>
+					<li><a href="#grid">Grid System</a></li>
+				</ul>
+			</nav>
+
+		<!-- Main -->
+			<div id="main" class="container">
+				<div class="row">
+					<div class="12u$">
+						<h3><span class="icon fa fa-code"></span> Developer's Menu</h3>
+						<p>
+							<!-- Feel free to edit this message to suit your purpose -->
+							This menu is intended solely for developers of this Forum.  This menu is a guide as to how to manually login/logout of the Forum, how to store and retrieve data and how to obtain the password of users etc.  Developers should refer to this menu for the sole purpose of improving the Service and if developers are found abusing the Service through this menu, they should be punished accordingly.
+						</p>
+						<p>
+							<span style="font-size: smaller; font-style: italic;">N.B. All actions as described below require the Console to be opened.</span>
+						</p>
+						<ol>
+							<li>
+								<h4>Anonymous Login</h4>
+								<p>
+									To perform an anonymous login (to view the Forum content, for example), simply type <code>localStorage.setItem(&quot;pf_loggedIn&quot;, true)</code> into the Console and refresh the page.  To logout, simply click &quot;Logout&quot;.
+								</p>
+								<p>
+									Example Explained: This Forum uses the <code>pf_loggedIn</code> item in Local Storage to determine whether the user is logged in.  By setting it to the boolean <code>true</code>, you are automatically logged in as an anonymous user.
+								</p>
+							</li>
+							<li>
+								<h4>View Entire Database</h4>
+								<p>
+									To view the entire account database, simply type <code>console.log(pf_database)</code> into the console to view the results.  However, please note that this method may not be very efficient when it comes to obtaining specific account data because you then have to scan through the database to find what you were looking for.
+								</p>
+							</li>
+							<li>
+								<h4>Obtain Password of Certain User (by Username)</h4>
+								<p>
+									To obtain the password of a certain user (by Username) only, type code of the following format to the console.  The code in red is the part you should actively modify depending on the situation.
+									<pre><code>for (i = 0; i < pf_database.length; i++) {
+  if (pf_database[i].username === "<span class="important-code">&lt;enter_username_of_user_you_want_to_fetch_the_password_of_here&gt;</span>") {
+    console.log(pf_database[i].password);
+  }
+}</code></pre>
+								</p>
+								<p>
+									Example Explained: The code above loops through the database to search for the username you have just inputted into the <code>for</code> loop.  If it finds an account with that particular username, it logs to the console the password of that user.
+								</p>
+							</li>
+							<li>
+								<h4>Login as another User (based on Username)</h4>
+								<p>
+									To login as another user, type in the following code into the console.  The parts in red denote the parts that you should actively modify to suit your situation.
+								</p>
+<pre><code>for (i = 0; i < pf_database.length; i++) {
+	if (pf_database[i].username === "<span class="important-code">&lt;username_here&gt;</span>") {
+		localStorage.setItem("pf_loggedIn", true);
+		localStorage.setItem("pf_username", pf_database[i].username);
+		localStorage.setItem("pf_password", pf_database[i].password);
+		localStorage.setItem("pf_status", pf_database[i].status);
+		localStorage.setItem("pf_name", pf_database[i].name);
+		localStorage.setItem("pf_profilePic", pf_database[i].profilePic);
+		localStorage.setItem("pf_title", pf_database[i].title);
+		window.location = "index.html";
+	}
+}</code></pre>
+								<p>
+									Example Explained: The code illustrated above loops through the database to search for the username you are looking for.  If the username matches, the code logs you in with the details of that user and redirects you to <code>index.html</code>.
+								</p>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<!-- <div class="container">
+					<div class="row double">
+						<div class="6u 12u$(medium)">
+							<h2>Aliquam Interdum</h2>
+							<p>Ornare interdum nascetur enim lobortis nunc amet placerat pellentesque nascetur in adipiscing. Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan. Justo aliquet massa adipiscing cubilia eu accumsan id. Arcu accumsan faucibus vis ultricies adipiscing ornare ut. Mi accumsan. Justo aliquet massa adipiscing cubilia eu accumsan id lorem ipsum dolor.</p>
+						</div>
+						<div class="3u 6u(medium) 12u$(small)">
+							<h3>Accumsan</h3>
+							<ul class="alt">
+								<li>Nascetur nunc varius commodo.</li>
+								<li>Vis id faucibus montes tempor</li>
+								<li>massa amet lobortis vel.</li>
+								<li>Nascetur nunc varius commodo.</li>
+							</ul>
+						</div>
+						<div class="3u$ 6u$(medium) 12u$(small)">
+							<h3>Faucibus</h3>
+							<ul class="alt">
+								<li>Nascetur nunc varius commodo.</li>
+								<li>Vis id faucibus montes tempor</li>
+								<li>massa amet lobortis vel.</li>
+								<li>Nascetur nunc varius commodo.</li>
+							</ul>
+						</div>
+					</div>
+				</div> -->
+				<div class="copyright">
+					&copy; Untitled. All rights reserved.
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/main.js"></script>
+
+		<!-- Pseudoforums Scripts -->
+			<script src="pf-assets/js/global.js"></script>
+			<script src="pf-assets/js/dev.js"></script>
+
+		<!-- Pseudoforums Stylesheets -->
+			<link rel="stylesheet" href="pf-assets/css/style.css" />
+
+	</body>
+</html>

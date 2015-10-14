@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<!-- skel-baseline v3.0.0 | (c) n33 | skel.io | MIT licensed -->
+<html>
+	<head>
+		<title>Pseudoforums - Admin Panel</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body id="top">
+
+		<!-- Header -->
+			<header id="header">
+				<h1><a href="index.html">Pseudoforums</a></h1>
+				<a id="log" href="#">Login</a>
+				<a href="#nav">Menu</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul id="menubar" class="links">
+					<li><a href="#top">Top</a></li>
+					<li><a href="#content">Content</a></li>
+					<li><a href="#elements">Elements</a></li>
+					<li><a href="#grid">Grid System</a></li>
+				</ul>
+			</nav>
+
+		<!-- Main -->
+			<div id="main" class="container">
+				<h3><span class="icon fa fa-pencil"></span> Admin Panel</h3>
+				<p>
+					Welcome to the Admin Panel!  Here, you can view the account details of all registered accounts, fetch passwords as you wish and even login as another user!
+				</p>
+				<h4>Visual Database</h4>
+				<div class="table-wrapper">
+					<table>
+						<thead>
+							<tr>
+								<th>
+									Name (Username)
+								</th>
+								<th>
+									Title (Status)
+								</th>
+								<th>
+									Path to Profile Picture
+								</th>
+							</tr>
+						</thead>
+						<tbody id="visual-database"></tbody>
+					</table>
+				</div>
+				<h4>Password Fetcher</h4>
+				<form>
+					<div class="row">
+						<div class="9u 12u$(medium)">
+							<p>
+								<input type="text" id="fetchPasswordOf" placeholder="Enter username ... ">
+							</p>
+						</div>
+						<div class="3u 12u$(medium)">
+							<p>
+								<a href="javascript:void(0)" class="button special fit" onclick="pf_fetchPassword()">Fetch Password</a>
+							</p>
+						</div>
+					</div>
+				</form>
+				<h4>Login As Another User</h4>
+				<form>
+					<div class="row">
+						<div class="9u 12u$(medium)">
+							<p>
+								<input type="text" id="loginAs" placeholder="Enter username ... ">
+							</p>
+						</div>
+						<div class="3u 12u$(medium)">
+							<p>
+								<a href="javascript:void(0)" class="button fit" onclick="pf_loginAsAnotherUser()">Switch Account</a>
+							</p>
+						</div>
+					</div>
+				</form>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<!-- <div class="container">
+					<div class="row double">
+						<div class="6u 12u$(medium)">
+							<h2>Aliquam Interdum</h2>
+							<p>Ornare interdum nascetur enim lobortis nunc amet placerat pellentesque nascetur in adipiscing. Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan. Justo aliquet massa adipiscing cubilia eu accumsan id. Arcu accumsan faucibus vis ultricies adipiscing ornare ut. Mi accumsan. Justo aliquet massa adipiscing cubilia eu accumsan id lorem ipsum dolor.</p>
+						</div>
+						<div class="3u 6u(medium) 12u$(small)">
+							<h3>Accumsan</h3>
+							<ul class="alt">
+								<li>Nascetur nunc varius commodo.</li>
+								<li>Vis id faucibus montes tempor</li>
+								<li>massa amet lobortis vel.</li>
+								<li>Nascetur nunc varius commodo.</li>
+							</ul>
+						</div>
+						<div class="3u$ 6u$(medium) 12u$(small)">
+							<h3>Faucibus</h3>
+							<ul class="alt">
+								<li>Nascetur nunc varius commodo.</li>
+								<li>Vis id faucibus montes tempor</li>
+								<li>massa amet lobortis vel.</li>
+								<li>Nascetur nunc varius commodo.</li>
+							</ul>
+						</div>
+					</div>
+				</div> -->
+				<div class="copyright">
+					&copy; Untitled. All rights reserved.
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/main.js"></script>
+
+		<!-- Pseudoforums Scripts -->
+			<script src="pf-assets/js/global.js"></script>
+			<script src="pf-assets/js/admin.js"></script>
+
+		<!-- Pseudoforums Stylesheets -->
+			<link rel="stylesheet" href="pf-assets/css/style.css" />
+
+	</body>
+</html>

@@ -1,0 +1,38 @@
+/*
+  style.css
+  The stylesheet for key Pseudoforums features
+  (c) Donald Leung.  All rights reserved.
+  MIT Licensed
+*/
+
+#public {
+  display: block;
+}
+
+#secure {
+  display: none;
+}
+
+#error {
+  font-size: smaller;
+  font-style: italic;
+  color: red;
+  display: none;
+}
+
+.important-code {
+  color: red;
+}
+
+.thread {
+  text-align: center;
+  background-color: #DDC;
+  border-radius: 10px;
+  border: 1px solid #DDF;
+  padding: 10px;
+}
+
+.closed {
+  background-color: #F99;
+  border: 1px solid #F9F;
+}

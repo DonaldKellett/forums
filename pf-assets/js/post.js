@@ -5,9 +5,9 @@
 */
 
 // Change pf_adminEmail to YOUR email
-var pf_adminEmail = "someone@example.tld";
+var pf_adminEmail = "dleung@connect.kellettschool.com";
 // Change pf_requestPostSubject to your preferred email subject
-var pf_requestPostSubject = "Pseudoforums - Request a Post"
+var pf_requestPostSubject = "Donald's Forums - Request a Post";
 
 if (pf_loggedIn === "true" && pf_status >= 3) {
   function pf_post() {

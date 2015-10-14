@@ -5,8 +5,8 @@
 */
 
 // Change this to YOUR email
-var pf_adminEmail = "someone@example.tld";
-var pf_requestBanTitle = "Pseudoforums: Request a User Ban";
+var pf_adminEmail = "dleung@connect.kellettschool.com";
+var pf_requestBanTitle = "Donald's Forums: Request a User Ban";
 
 if (pf_loggedIn === "true" && pf_status >= 4) {
   function pf_reportUser() {

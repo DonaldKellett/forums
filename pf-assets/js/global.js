@@ -79,56 +79,20 @@ if (pf_loggedIn === "true") {
 // Account Database (@type [Array]) - feel free to edit!
 
 var pf_database = [
+  // Forum Administrator - MUST keep as first entry
   {
-    username: "dummy7",
-    password: "dummy7",
-    status: 7, // Administrator
-    name: "Pseudoforumsadministrator",
+    username: "dleung",
+    password: "dl6900",
+    status: 7, // Forum Administrator
+    name: "Donald Leung",
     profilePic: "pf-images/admin.png"
   },
+  // Visitor Account (open to everyone)
   {
-    username: "dummy6",
-    password: "dummy6",
-    status: 6,
-    name: "Pseudoforumsdeveloper"
-  },
-  {
-    username: "dummy5",
-    password: "dummy5",
-    status: 5,
-    name: "J. F. Kennedy",
-    profilePic: "pf-images/kennedy.png"
-  },
-  {
-    username: "dummy4",
-    password: "dummy4",
-    status: 4,
-    name: "Abraham Lincoln",
-    profilePic: "pf-images/lincoln.png"
-  },
-  {
-    username: "dummy3",
-    password: "dummy3",
-    status: 3,
-    name: "Jane Doe"
-  },
-  {
-    username: "dummy2",
-    password: "dummy2",
-    status: 2,
-    name: "John Doe"
-  },
-  {
-    username: "dummy1",
-    password: "dummy1",
+    username: "guest",
+    password: "guest",
     status: 1,
-    name: "Jane Anderson"
-  },
-  {
-    username: "dummy0",
-    password: "dummy0",
-    status: 0,
-    name: "John Anderson"
+    name: "Guest"
   }
 ];
 
@@ -140,3 +104,7 @@ for (i = 0; i < pf_database.length; i++) {
 }
 
 // console.log(pf_database);
+
+// My Custom Title
+
+pf_database[0].title = "Forum Admin / Dev Team";

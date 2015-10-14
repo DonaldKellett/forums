@@ -5,10 +5,10 @@
 */
 
 // Set this variable to the email of the Administrator (i.e. YOUR email)
-var pf_adminEmail = "someone@example.tld";
+var pf_adminEmail = "dleung@connect.kellettschool.com";
 
 
-var pf_commentEmailTitle = "Pseudoforums - Commenting Request"
+var pf_commentEmailTitle = "Donald's Forums - Commenting Request";
 
 if (pf_loggedIn === "true" && pf_status >= 2) {
   function pf_comment() {

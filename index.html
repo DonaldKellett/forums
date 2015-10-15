@@ -56,93 +56,60 @@
 					</div>
 				</span>
 				<span id="secure">
-					<div class="row thread">
-						<div class="4u 12u$(medium)">
-							<div class="dleung"></div>
-						</div>
-						<div class="8u 12u$(medium)">
-							<h3>Initializing Pseudoforums</h3>
-							<p>
-								Hello, this is the creator of Pseudoforums speaking and I will now take you through a tour to initialize this platform you are now using called Pseudoforums.
-							</p>
-							<p>
-								First of all, feel free to scroll down the HTML code of this page (and every other page provided by this platform) and edit the copyright notice at the footer.  This project is <b>MIT Licensed</b>, which means that as long as you keep the original copyright notice somewhere, you can do just about anything with it.
-							</p>
-							<p>
-								After that, you should edit the database located at <code>pf-assets/js/global.js</code> to include your own account.  Preferably, if you are the one hosting a GitHub Forum using this platform, you should be the Administrator of this Forum and thus your <code>status</code> should be 7.  The <code>pf_database</code> located at <code>pf-assets/js/global.js</code> is an <strong>array</strong> of <strong>objects</strong> (accounts).  For example:
-							</p>
-<pre><code style="text-align: left;">var pf_database = [
-	{
-		username: "pfadmin",
-		password: "pf9487",
-		status: 7,
-		name: "Pseudoforumsadministrator"
-	},
-	{
-		username: "pfdev",
-		password: "devedev",
-		status: 6,
-		name: "Pseudoforumsdeveloper",
-		profilePic: "pf-images/dev.jpg"
-	}
-];</code></pre>
-							<p>
-								The above example shows 2 accounts.  The first account has <code>username</code> "pfadmin" and <code>password</code> "pf9487", which is (obviously) the details required for the user to login to that account.  The first account has a status of 7, which means that he/she is an Administrator of the Forum and his/her displayed <code>name</code> on Forums when posting is "Pseudoforumsadministrator".  The second account has login details <code>username: "pfdev"</code> and <code>password: "devedev"</code>, a status of 6 (Developer), a displayed name of Pseudoforumsdeveloper and a custom profile picture with path "pf-images/dev.jpg".
-							</p>
-							<p>
-								At this point, you may have noticed that the first account does not have the <code>profilePic</code> property while the second account does.  In this Forum platform, accounts <b>must</b> have the following details (properties): <code>username</code>, <code>password</code>, <code>status</code> and <code>name</code>.  The <code>profilePic</code> is optional and for those who have custom profile pictures.  If the <code>profilePic</code> property is not specified in the account details, the code will automatically generate a default <code>profilePic</code> with the path <code>pf-images/system/default.jpg</code>.
-							</p>
-							<p>
-								Initially, this platform comes with 8 dummy accounts (view the database to view the account details).  When you start using this platform, you should delete the dummy accounts and add your own account(s) instead.
-							</p>
-							<p>
-								After you have configured your database, you should then configure the email address that the commenting, posting and moderating requests will be sent to.  Unfortunately, each panel operates on their own Javascript file so you will have to modify the email thrice.  If you go to <code>comment.js</code>, <code>post.js</code> and <code>mod.js</code>, you should see a variable called <code>pf_adminEmail</code> (or equivalent) declared at the very start of the file.  You should change the value of the variable to your own email address.  The rest of the code will sort it out.  You can also customize the subject of the email you will receive (follow comments in those JS files).
-							</p>
-							<p>
-								Well, I think this is it.  If you have any further questions or would like to report bugs/glitches on this platform, feel free to email <a href="mailto:dleung@connect.kellettschool.com">dleung@connect.kellettschool.com</a> to report it.  Enjoy!
-							</p>
-						</div>
-					</div>
-					<hr class="major" />
 					<div class="row thread closed">
 						<div class="4u 12u$(medium)">
 							<div class="dleung"></div>
 						</div>
 						<div class="8u 12u$(medium)">
-							<h3><span class="icon fa fa-lock" title="This thread is closed.  You may no longer comment on this thread."></span> Creating Threads, Closing Threads and Commenting</h3>
+							<h3><span class="icon fa fa-lock" title="This thread is closed.  You may no longer comment on this thread."></span> Terms of Service</h3>
 							<p>
-								A quick introduction to creating, closing and commenting on threads to get you started.  As you may have noticed by reading the code, all secure Forum content (i.e. content that can only be accessed by logging in) lies directly within the <code>&lt;span&gt;</code> tags with <code>id="secure"</code>.  In more technical terms, all secure Forum content are <b>direct children</b> of the tag mentioned above.
+								By using this Service and its related features thereof, you agree to be bound to the following Terms at all times:
+							</p>
+							<ol>
+								<li>
+									<h4>General Use</h4>
+									<p>
+										You are hereby notified that you are permitted to use all given features of this Service provided that you:
+									</p>
+									<ol>
+										<li>Do not submit any inappropriate content through any of the mailing forms (Commenting, Posting or Moderating Forms), including but not limited to, swearing (use of vulgar language), racial discrimination (even if it is meant in a "friendly" manner) and/or adult-related (explicit) content.  Any such actions will result in an account ban (temporary or permanent) depending on the severity of the breach.</li>
+										<li>Do not attempt to exploit any deficiencies in the code.  For example, if you are Banned but you can still somehow access the commenting or posting panel, <b>do not</b> send any emails via those panels.  Instead, you <b>should</b> immediately file a bug report and send it to <a href="mailto:dleung@connect.kellettschool.com">dleung@connect.kellettschool.com</a>.  A breach of this rule will result in a temporary account ban and in case there is a repeated violation of this rule, your account may be permanently banned or removed altogether.</li>
+										<li>Do not attempt to hack into the Forum by any means.  Anyone caught hacking the Forums will have their account <strong>removed</strong> immediately and a severe violation of this Rule may result in the issue brought to a Local Court.</li>
+										<li>Do not abuse the mailing system of this Forum (Commenting, Posting and Moderating Panels) which includes but is not limited to spamming and/or advertising.  A violation of this Rule will result in a temporary account ban and in the case where there is a repeated violation, your account will be banned permanently.</li>
+										<li>Understand that any and all actions taken by the Administrator(s) of this Forum are final and irreversible.  The Administrator(s) of this Forum reserve every right to deny you of this Service at any time and for any reason.</li>
+									</ol>
+								</li>
+								<li>
+									<h4>Copyright Notice</h4>
+									<p>You are hereby notified that this Forum and <b>all</b> the associated code are copyrighted by &copy; Donald Leung.  In <b>no</b> circumstances shall you attempt to reproduce the code used in this Forum for your own purposes.  In the case that you are found violating this Rule, you will be asked to <strong>remove said code within seven days of notice</strong>.  In the case that you refuse to comply and/or repeatedly violate this Rule, the Administrator(s) of this Forum reserve each and every right to bring this issue to a Local Court.</p>
+									<p><span style="font-size: smaller; font-style: italic;">N.B. The code used in this Forum was taken from a pseudo-forum platform called <a href="https://github.com/DonaldKellett/Pseudoforums" target="_blank">Pseudoforums</a>.  Since it is MIT Licensed, you <strong>have</strong> each and every right to use the code provided by Pseudoforums for your own purposes.  You must <strong>not</strong>, however, copy the code <strong>directly</strong> from this website.</span></p>
+								</li>
+								<li>
+									<h4>Developer Rights and Restrictions</h4>
+									<p>Developers of this Forum are hereby notified that they are not fully bound to the first section of the Terms of Service.  For example, Developers reserve the right to hack into the Forum and expose deficiencies in the code <strong>for the sole purpose of identifying bugs and glitches in this Forum and for the sole purpose of improving this Forum</strong>.  In the case that a Developer is caught hacking the Forums for any reason other than the reason(s) specified above, their account(s) will be suspended and/or terminated.  In the case of a severe violation the issue may be brought into the Local Court.</p>
+								</li>
+							</ol>
+							<p>Users of this Forum are hereby notified that the Terms of Service may be subject to change at any time and for any reason.</p>
+						</div>
+					</div>
+					<hr class="major" />
+					<div class="row thread">
+						<div class="4u 12u$(medium)">
+							<div class="dleung"></div>
+						</div>
+						<div class="8u 12u$(medium)">
+							<h3>Welcome to the Forums</h3>
+							<p>
+								Welcome to <b>Donald's Forums</b>!  In this forum, you are allowed to create topics on and discuss about everything, be it studies, gaming, hobbies, sports, etc. as long as it is sensible and appropriate.  Bug reports, issues and/or feedback regarding my personal website (<a href="http://donaldkellett.github.io">http://donaldkellett.github.io</a>) are also more than welcome and can be posted here on this Forum.
 							</p>
 							<p>
-								To create a normal thread:
-								<ol>
-									<li>
-										<p>
-											Create a <code>div</code> with <code>class="row thread"</code> directly within the <code>&lt;span id="secure"&gt;</code> tag like this: <code>&lt;div class="row thread"&gt;&lt;/div&gt;</code>
-										</p>
-									</li>
-									<li>
-										<p>
-											Within the div you just created, insert the following code: <code>&lt;div class="4u 12u$(medium)"&gt;&lt;/div&gt;&lt;div class="8u 12u$(medium)"&gt;&lt;/div&gt;</code>
-										</p>
-									</li>
-									<li>
-										<p>
-											Inside the div with <code>class="4u 12u$(medium)"</code>, insert a div with <code>class="<span class="important-code">&lt;username_of_user_who_created_this_thread&gt;</span>"</code>.  The code in this platform will sort the rest out for you.
-										</p>
-									</li>
-									<li>
-										<p>
-											Finally, feel free to add content of any type within the div with <code>class="8u 12u$(medium)"</code>.  Ideally the content in this div should have a <code>&lt;h3&gt;</code> header and at least 1 paragraph.
-										</p>
-									</li>
-								</ol>
+								So, before you proceed, I would like to bring your attention to one thing: this Forum is not a real forum in technical terms.  In a real Forum, whenever you create a thread or submit a comment, the thread/comment is saved onto the website automatically for everyone else to see.  However, in this "Forum", if you want to create a topic and/or comment on it, you must go to the related page (e.g. "Request a Post" to create a topic).  After that, you must fill in the form and click "Submit" (or equivalent).  This then opens up your email with a pre-formatted and pre-typed email which you should then click "Send" to send it to me.  Finally, if I approve of the comment, I will manually add it to the website and you will be notified of your successful request.  The reason I could not create a real Forum is because GitHub Sites <b>do not</b> support server-side code like PHP, which is crucial for creating services like Forums.  However, luckily for me, there is a feature in Javascript (typical coding language used to make simple games) that allows me to mimic certain aspects of a real working Forum, such as logging in and logging out.  The consequence of this is that all threads or comments are moderated by me before they are added into the site, which I suppose is good because it keeps this Forum clean.
 							</p>
 							<p>
-								To close a thread, simply change the class of the thread from <code>row thread</code> to <code>row thread closed</code> and add the following code at the start of the "h3" title: <code>&lt;span class="icon fa fa-lock" title="This thread is closed.  You may no longer comment on this thread."&gt;&lt;/span&gt;</code>.
+								If you are viewing this message using the <b>Guest</b> account, I would strongly recommend you to register for an account.  The procedure can be found by logging out.
 							</p>
 							<p>
-								To comment on a thread, simply follow the instructions on creating a thread and then changing the <code>class</code> of the thread from <code>row thread</code> to <code>row</code>.  Comments should ideally be directly under the parent thread.
+								Please note that if you have an account, before you start posting anything, you should first read the <strong>Terms of Service</strong> carefully.  Thank you, and enjoy!
 							</p>
 						</div>
 					</div>

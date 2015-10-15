@@ -93,6 +93,19 @@ var pf_database = [
     password: "guest",
     status: 1,
     name: "Guest"
+  },
+  // Other Accounts
+  {
+    username: "shangyang",
+    password: "meinkampf",
+    status: 3,
+    name: "Shang Yang"
+  },
+  {
+    username: "christianatheist",
+    password: "ca8306",
+    status: 3,
+    name: "Ashton"
   }
 ];
 

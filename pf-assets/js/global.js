@@ -106,6 +106,12 @@ var pf_database = [
     password: "ca8306",
     status: 3,
     name: "Ashton"
+  },
+  {
+    username: "joncrawford",
+    password: "jc9206",
+    status: 6,
+    name: "Jon Crawford"
   }
 ];
 
@@ -120,4 +126,4 @@ for (i = 0; i < pf_database.length; i++) {
 
 // My Custom Title
 
-pf_database[0].title = "Forum Admin / Dev Team";
+pf_database[0].title = "Administrator / Developer";

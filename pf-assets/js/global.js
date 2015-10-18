@@ -112,6 +112,12 @@ var pf_database = [
     password: "jc9206",
     status: 6,
     name: "Jon Crawford"
+  },
+  {
+    username: "harrystreats",
+    password: "hs198306",
+    status: 6,
+    name: "Harry Streatfield"
   }
 ];
 
